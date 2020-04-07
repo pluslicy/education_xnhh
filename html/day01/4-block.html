@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>块元素</title>
+  <style>
+    body {
+      font-size: 14px;
+      font-family:  '微软雅黑'; /*字体族*/
+    }
+    h1 {
+      margin:0;
+      font-weight: normal; /*粗细程度*/
+      font-size: 14px; /*字体大小*/
+    }
+    p {
+      margin: 0;
+    }
+    ul,
+    ol,
+    dl {
+      margin: 0;  /*外边距*/
+      padding: 0; /*内边距*/
+      list-style: none; /*列表样式，小黑点，数字*/
+    }
+    dd {
+      margin: 0 ;
+    }
+  </style>
+</head>
+<body>
+  <dl>
+    <dt>初中一年级</dt>
+    <dd>一班</dd>
+    <dd>二班</dd>
+    <dt>初中二年级</dt>
+    <dd>一班</dd>
+    <dd>二班</dd>
+  </dl>
+
+  <ol>
+    <li>无序列表1</li>
+    <li>无序列表2</li>
+    <li>
+      <!-- 可以放任意元素 -->
+      <p>one</p>
+      <div>hello</div>
+      <ul>
+        <li>one</li>
+        <li>two</li>
+      </ul>
+    </li>
+  </ol>
+  <!-- 盒子 -->
+  <div>
+    <div>无序列表1</div>
+    <div>无序列表2</div>
+    <div>无序列表3</div>
+  </div>
+
+  <!-- 列表 -->
+  <ul>
+    <li>无序列表1</li>
+    <li>无序列表2</li>
+    <li>无序列表3</li>
+  </ul>
+  <p>这是一个段落</p>
+  <p>这是一个段落</p>
+  <h1>这是一级标题</h1>
+  <h1>这是一级标题</h1>
+  <h2>这是二级标题</h2>
+  <div>这是一个div</div>
+  <div style="font-size: 24px; font-weight: bold; margin: .5em 0;">这是一个div</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>行内元素</title>
+</head>
+<body>
+  <div style="min-height: 1000px;">
+    <!-- 图片 -->
+    <img src="./images/logo1.jpg" alt="图片找不到了">
+
+
+    <ul>
+      <li>
+        <!-- 在新的tab中打开页面 -->
+        <a href="https://www.baidu.com" target="_blank">百度一下</a>
+        <!-- 锚点跳转 -->
+        <a href="#introduce">介绍</a>
+        <a href="#history">履历</a>
+        <!-- 阻止默认跳转 -->
+        <a href="javascript:void(0)" onclick="alert(1)">跳转</a>
+
+        <span>这是一个span</span>
+        <strong>加粗</strong>
+        <b>加粗</b>
+        <em>强调</em>
+        <i>斜体</i>
+        原价<del>180</del>现价8.8
+      </li>
+    </ul>
+  </div>
+  <div id="introduce">
+    <h1>介绍</h1>
+    <div style="min-height: 1000px;">
+
+    </div>
+  </div>
+  <div id="history">
+    <h1>个人履历</h1>
+    <div style="min-height: 1000px;">
+
+    </div>
+  </div>
+
+
+</body>
+</html>

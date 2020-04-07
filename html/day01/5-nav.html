@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>导航</title>
+  <style>
+    /*1. 重置 */
+    body {
+      font: normal normal 14px '微软雅黑';
+    }
+    body ,ul,ol,dl,p,h1,h2,h3{
+      margin: 0;
+      padding: 0;
+    }
+    ul,ol,dl {
+      list-style: none;
+    }
+    a {
+      color: #333333;
+      text-decoration: none;
+    }
+
+    /*2. 样式添加 */
+    .nav {
+      border-bottom: 1px solid #ededed;
+      box-shadow: 0 1px 5px #ededed;
+    }
+    .nav .wrapper{
+      width: 1024px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .nav .top_nav::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .nav .top_nav li{
+      float: left;
+      width: 100px;
+      text-align: center;
+      line-height: 3em;
+      height: 3em;
+    }
+    .nav .top_nav li:hover{
+      border-bottom: 2px solid bisque;
+    }
+    .nav .top_nav li:hover a {
+      color: bisque;
+    }
+    .nav .top_nav .top_nav_sub {
+      display: none;
+      background-color: #ededed;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      height: 200px;
+    }
+    .nav .top_nav li:hover .top_nav_sub {
+      display: block;
+    }
+
+    .products{
+
+    }
+    .products .wrapper {
+      width: 1024px;
+      margin: 0 auto;
+    }
+    .products .wrapper ul::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .products .wrapper ul > li {
+      float: left;
+      width: 330px;
+      height: 200px;
+      overflow: hidden;  /*超过部分隐藏*/
+    }
+    .products .wrapper ul > li:nth-child(odd){
+      background-color: lightcoral;
+    }
+    .products .wrapper ul > li:nth-child(even){
+      background-color: lightblue;
+
+    }
+    .products .wrapper ul > li img {
+      width:100%;
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- 1. 搭建网页结构【html】良构 【身材】 -->
+  <!-- 2. 优化网页效果【css3】【化妆】 -->
+  <!-- 3. 网页动态化【js】数据通信 ajax -->
+
+  <div class="products">
+    <div class="wrapper">
+      <ul>
+        <li><img src="./images/logo.jpg" alt=""></li>
+        <li><img src="./images/s.png" alt=""></li>
+        <li><img src="./images/timg.jpg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="wrapper">
+      <ul class="top_nav">
+        <li><a href="">首页</a></li>
+        <li>
+          <a href="">居家生活</a>
+          <div class="top_nav_sub">
+            居家生活son
+          </div>
+        </li>
+        <li>
+          <a href="">电子产品</a>
+          <div class="top_nav_sub">
+            电子产品的son
+          </div>
+        </li>
+        <li><a href="">户外活动</a></li>
+        <li><a href="">运动旅行</a></li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
