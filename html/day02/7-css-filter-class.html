@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪类</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪类过滤器</title>
+  <style>
+    /* .top_nav > ul > li:nth-child(3n+1) { */
+    ul>li:not(:only-child){
+      /*border: 1px solid #ccc;*/
+      background-color: #ededed;
+    }
+  </style>
+</head>
+<body>
+  <div class="top_nav">
+    <ul>
+      <li>首页</li>
+      <li>校园新闻</li>
+      <li>招生就业</li>
+      <li>学院风采</li>
+      <li>学生作品</li>
+      <li>考试系统</li>
+    </ul>
+  </div>
+
+  <div class="left_nav">
+    <ul>
+      <li>软件学院</li>
+      <li>艺术学院</li>
+      <li>机械学院</li>
+    </ul>
+  </div>
+
+  <div class="bottom_nav">
+    <ul>
+      <li>软件学院</li>
+    </ul>
+  </div>
+</body>
+</html>

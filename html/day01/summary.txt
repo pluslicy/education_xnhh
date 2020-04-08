@@ -1,0 +1,125 @@
+1. 当前较为流行的前后台分离开发架构
+  1) 服务器端渲染技术
+    jsp
+      jsp -> servlet -> class -> 执行 -> 输出html
+    asp
+      asp -> ... -> 输出html
+    页面和服务接口都由后端程序员完成！
+
+  2) 客户端渲染技术
+    html -> 脚本（js） -> 动态输出html
+
+    后端程序员只提供数据接口（springboot + spring + springmvc + mybatis +...）
+    前端程序员完成页面的编写 (html + css + javascript + vue)
+
+  全栈工程师
+  （前端 + nodejs服务器端）
+  （前端 + Javaee服务器端）*！
+2. 需求
+  1) 基于token的登录
+    jsp 基于cookie登录（几乎不用！） 
+  2) 基于第三方登录
+    OAuth2
+  3) 附件上传
+    form
+      input type="file"
+    基于拖拽
+  4) 附件下载
+  5) 参数传递
+    请求方式 get post
+    传递参数的编码形式：
+      1. 查询字符串
+      2. json字符串
+      用户名密码     
+       login(String username ,String password) {}
+       login(@RequestBody UserVM user)
+  6) ...
+
+3. HTML
+  1) html环境
+    1. vscode(插件 open in brower)
+    2. 浏览器(火狐谷歌)
+  2) html结构 
+    doctype声明
+      html5
+      html4
+      引申：Java与html本质的区别
+    html主体
+      html标签都是内置
+  3) html元素
+    html文件由无数个元素组成
+
+    常规元素：开始标签 子元素或内容 结束标签
+      <div>
+        <p id="one">hello world</p>   <!--推荐用法-->
+        <p ID='one'>hello world</p>
+        <p ID=one>hello world</p>
+      </div>
+    单元素：开始标签
+      <img src="" alt=""/>
+      <br/>
+      <input/>
+    属性是声明在开始标签的内部，一个属性由属性名和属性值组成，通过=进行分割，属性与属性之间通过空格来分割，属性名不区分大小写，属性值区分大小写，属性值可以使用单引号，双引号或者是不用引号
+
+    注释 
+      <!-- 仅此一种注释 -->
+  4) 标签
+    1. 块级别标签（语义）
+      1) 作用
+        页面框架的搭建（从上往下，由外而内）
+        行、列
+        举例说明：导航、产品布局
+
+        <div> 占满整个屏幕
+          <div class="wrapper">   宽度为1200，居中显示
+            <ul> 清理浮动 
+              <li><a href="">首页</a></li> 浮动
+              <li><a href="">首页</a></li>
+              <li><a href="">首页</a></li>
+            </ul>
+          </div>
+        </div>
+
+      2) 特点：
+        独占一行空间
+        宽度默认为100%；高度默认由内容决定(一般不给父元素指定高度，给子元素指定高度，子元素会撑起父元素)
+        可以为块元素指定高度
+      3) 细节：
+        div
+        h1~h6
+        p
+        ul>li   无序列表
+        ol>li   有序列表
+        dl>dt,dd
+
+        补充：
+        H5中新增的块元素(语义标签)
+          显示效果上与div完全相同，没有任何额外的样式。但是比div多的是它具有一定的语义
+          header
+          nav
+          article
+          section
+          aside
+          footer
+          address
+    2. 行级别标签（功能）
+      1) 作用：
+        在页面框架中填充内容，文字，图片，视频，音频
+        span
+        strong
+        b
+        em
+        i
+        a       超连接（链接网页）
+          href target
+        img     链接图片
+          src alt width height
+        H5新增了行内元素
+          video   链接视频
+          audio   链接音频
+      2) 特点：
+        一个行内元素与其他行内元素共享一行空间
+        行内元素的宽高都由内容决定
+        行内元素无法指定宽高
+        一般情况下，行内元素只能出现块元素中
+      3) 细节：

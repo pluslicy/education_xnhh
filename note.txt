@@ -161,7 +161,6 @@
 			语法升级 	拉姆达
 			jvm升级（解释java代码）
 			效果升级 
-
 			springboot写完代码之后如何部署
 				1) 打包成为war,直接抛在tomcat/webapps，war就会自动解压
 				2) 打包成为jar,直接运行jar(内置了tomcat)
@@ -239,10 +238,147 @@
 			<span>hello</span>
 			<a href="">百度一下</a>
 
-	6. css选择器
+	6. css入门
+		三要素：
+			1) html (网页骨架) 	块 ，行 （table/form）
+			2) css（页面装饰，布局，动画过渡效果）
+				原则：对于动画效果能用css实现的绝对不用js
+			3) Javascript（树莓派）
+				动态DOM, 类似于jstl
+				数据交互
+		如何在html中使用css(3种方式)
+			1) 嵌入在标签内部
+					将css代码写在了html中，较为混乱
+					复用性较低
 
-	7. css布局
+					好处：优先级高，简单直接（修改别人代码的时候，weex rn）
+			2) 集中嵌入在style标签中
+					
+			3) 将css独立写在外部的css文件中，并且通过link导入进来
+				适用于企业级开发
+		css语法
+			选择器 {
+				/*规则*/
+				color:#ffffff;
+				background-color:pink;
+			}
+			
 
+	7. css选择器 (jQuery选择器)
+		1) 核心选择器
+			用法：选择较大范围
+			1. 标签（元素）选择器
+				div {}
+				h1 {}
+			2. id选择器
+				#one {}
+				<div id="one">one</div>
+				<div id="two">two</div>
+			3. class选择器
+				.first {}
+				<div id="one" class="first">one</div>
+				<div id="two" class="first">two</div>
+				<div id="three" class="first">one</div>
+				<div id="four" class="second">two</div>
+				<p id="five" class="first">p</div>
+			词穷！！！
+			4. 并且选择器
+				div.first {}
+				p#five {}
+			5. 或者选择器
+				div,.first {}
+			6. 普遍选择器
+				* 	
+		2) 层次选择器【一般不超过5层】
+			1. 子代选择器
+				.top_nav > ul > li
+				选中class为top_nav的元素的直接后代ul元素的直接后代li元素
+			2. 后代选择器
+				.top_nav li				
+			3. 下一个兄弟选择器
+				.top_nav li + *
+			4. 之后所有兄弟选择器
+				.top_nav li ~ *
+		3) 过滤器
+			对已经选择到的元素进行过滤
+			1. 属性过滤器
+				selector[name]	已选择到的元素具有name属性
+				selector[name=v]	已选择到的元素具有name属性，并且name属性的值为v
+				selector[name^=v]	已选择到的元素具有name属性，并且name属性的值以'v'开头
+				selector[name$=v]	已选择到的元素具有name属性，并且name属性的值以'v'结尾
+				selector[name*=v]	已选择到的元素具有name属性，并且name属性的值中包含了'v'
+			2. 伪类过滤器
+				以:开头的
+				selector:first-child 	过滤出已选择元素中的是第一个孩子的元素
+				selector:last-child 	
+				selector:nth-child(2)
+				selector:nth-child(even)
+				selector:nth-child(odd)
+				selector:nth-child(3n+1)
+				selector:only-child
+				selector:not(selector)
+				...
+
+				selector:hover
+				selector:active
+				selector:visited
+				selector:focus
+			3. 伪元素过滤器
+				可以产生出来一个虚拟元素（行内元素）
+				以::开头的
+				div::before {
+
+				}
+				div::after {
+
+				}
+				<div>
+					::before
+					<p>one</p>
+					<p>two</p>
+					::after
+				</div>
+	8. 规则
+		字体
+		网络字体（字体图标可）
+		文本
+		列表
+		盒子
+		背景
+	9. css布局
+
+软件
+	厂子上班？软件开发、软件培训
+		高级技工（）- 制造（创造）
+		软件	
+			使用软件 					群众（使用苹果手机）
+			编写软件   				富士康（苹果手机组装）=
+			编写软件编程语言 	 iphone公司搞苹果系统研发的人 s-c
+
+	智慧校园选课排课系统 （界面）
+前端
+	1. 底层【打扫卫生，手动打扫卫生】
+		html css Javascript 		
+			模态框、提示框、表格、列表...
+			dom操作（使用js控制css/html）
+				让模态框显示
+				var dom = document.getElementById("one");
+				dom.style.visible = true;
+	2. 中层【手扶着吸尘器打扫卫生】
+		jsp (html js jquery)
+		基于dom操作，dom驱动框架
+		jquery、easyui(组件)
+			$("#one").css("visible",true);
+	3. 高层【保姆】1500平 大别墅（森林公园）3亿
+		移动互联（前后台分离开发）
+		java 				写服务端语言
+			|
+		android/ios 写界面语言
+		H5 写界面的语言（web,混合式）（webview）
+		vue/angular/react 【脱离dom操作】
+			1. 获取数据 ajax，交互
+			2. 将数据绑定到页面中（vue-dom操作）
+			3. 当数据改变后页面更新（vue）
 
 
 
@@ -269,9 +405,28 @@
 	手机 	1400 * 1240 	6寸
 	dpi
 3. 你有没有用过阿里云服务器
+	mysql
+	jdk
+	apache
+	防火墙中打开3306、8888等端口
+
+	navicator连接上mysql数据库
 
 4. 请把你的github地址提供给我们（看看你写过的代码） 
 
+5. 博客（自己写一套博客系统；csdn）
+	看点资讯精选
+	编写博客
+	如何在阿里云上搭建java部署环境？
+
+	简历
+	基本信息
+		github地址
+		博客地址
+		个人网站
+	个人技能
+	项目经验
+	获奖经历
 
 
 

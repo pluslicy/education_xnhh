@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素过滤器</title>
+  <style>
+    @font-face {
+      font-family: 'iconfont';  /* project id 1741477 */
+      src: url('http://at.alicdn.com/t/font_1741477_gcmn8k28g5n.eot');
+      src: url('http://at.alicdn.com/t/font_1741477_gcmn8k28g5n.eot?#iefix') format('embedded-opentype'),
+      url('http://at.alicdn.com/t/font_1741477_gcmn8k28g5n.woff2') format('woff2'),
+      url('http://at.alicdn.com/t/font_1741477_gcmn8k28g5n.woff') format('woff'),
+      url('http://at.alicdn.com/t/font_1741477_gcmn8k28g5n.ttf') format('truetype'),
+      url('http://at.alicdn.com/t/font_1741477_gcmn8k28g5n.svg#iconfont') format('svg');
+    }
+    
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    /* 字体图标库 */
+    ul>li::after{
+      font-family: "iconfont";
+      content: "#xe69b;";
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>one</li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+</body>
+</html>
