@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字体图标库</title>
+  <style>
+    /* 1. 声明自定义字体库为iconfont */
+    @font-face {
+      font-family: 'iconfont';  /* project id 1741477 */
+      src: url('https://at.alicdn.com/t/font_1741477_hz8bq8tgz2r.eot');
+      src: url('https://at.alicdn.com/t/font_1741477_hz8bq8tgz2r.eot?#iefix') format('embedded-opentype'),
+      url('https://at.alicdn.com/t/font_1741477_hz8bq8tgz2r.woff2') format('woff2'),
+      url('https://at.alicdn.com/t/font_1741477_hz8bq8tgz2r.woff') format('woff'),
+      url('https://at.alicdn.com/t/font_1741477_hz8bq8tgz2r.ttf') format('truetype'),
+      url('https://at.alicdn.com/t/font_1741477_hz8bq8tgz2r.svg#iconfont') format('svg');
+    }
+    /* 2.使用声明好的字体库 */
+    .iconfont {
+      font-family: iconfont;
+      font-style: normal;
+    }
+
+    ul > li:hover  {
+      color: teal;
+    }
+    ul.department {
+      list-style: none;
+    }
+    ul.department > li::before {
+      font-family: "iconfont";
+      content: "\e6a5";
+    }
+  </style>
+</head>
+<body>
+  <div style="font-family: 宋体;">
+    你好世界
+  </div>
+  <i class="iconfont">&#xe6a8;</i>
+  <ul>
+    <li><i class="iconfont">&#xe6ad;</i><span>首页</span></li>
+    <li><i class="iconfont">&#xe6a8;</i><span>列表</span></li>
+    <li></li>
+  </ul>
+
+  <ul class="department">
+    <li>JavaEE</li>
+    <li>WebUI</li>
+    <li>Big Data</li>
+    <li>IOT</li>
+  </ul>
+  
+</body>
+</html>

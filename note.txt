@@ -341,7 +341,6 @@
 	8. 规则【简单大方】
 		单位值
 			px 	像素 
-
 		字体【设计师-架构师规定】
 		【可以被继承】
 			<div style="font-size:12px">
@@ -366,7 +365,12 @@
 			速写
 			font: [font-weight] [font-style] font-size/line-height font-family
 
-		网络字体（字体图标可）
+		网络字体（字体图标库）
+			iconfont【阿里巴巴的字体图标库】
+			1. 选取自己想要图标
+			2. 生成项目
+			3. 按照说明进行使用
+		
 		文本【可以被继承】
 			text-align
 				left 	居左排列
@@ -384,8 +388,45 @@
 		列表
 			list-style:none
 		盒子
+			margin
+			padding
+			border
+			width
+			height
 		背景
+			background-color 	背景色
+				关键字 		teal	red 	black white
+				十六进制	#ffffff 	#000000 	#ff0000
+				rgb函数 	rgb(255,255,255)
+				rgba函数 	rgba(0,0,0,.5)
+      background-clip 	背景覆盖区域
+				border-box 	边框及边框以内全部覆盖
+				padding-box 内边距及内边距以内全部覆盖
+				content-box 内容区域全部覆盖
+      background-origin: border-box;
+				背景图铺设的起点
+      background-image: url('./images/a.jpg');
+				背景图
+      background-repeat: no-repeat;
+				背景图的重复方式
+      background-size: contain;
+				背景图的覆盖方式
+      background-position: 50px 50px;
+				关键字 center
+				坐标点 1px 2px
+				背景图开始铺设的坐标
+			backgroud:
+				速写形式
 	9. css布局
+		1) 浮动布局
+
+
+
+
+
+
+
+
 
 软件
 	厂子上班？软件开发、软件培训
