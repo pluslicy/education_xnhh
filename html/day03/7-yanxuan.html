@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网易严选</title>
+  <style>
+    /* 1.重置样式 */
+    body,ul {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    /* 2.公共样式 */
+    .wrapper {
+      width: 1210px;
+      margin: 0 auto;
+      background-color: #ffffff;
+    }
+
+    /* 3.结构样式 */
+    /* 3.1 第一行产品 */
+    .products {
+      background-color: #f4f4f4;
+    }
+    .products ul::after {
+      content:"";
+      display: block;
+      clear:both;
+    }
+    .products ul > li{
+      height: 350px;
+      width: 280px;
+      float: left;
+      margin-right: 30px;
+    }
+    .products ul > li:last-child {
+      margin-right: 0;
+    }
+    .products ul > li{
+      background-color: seagreen;
+    }
+
+    /* 3.2人气 */
+    .renqi {
+      margin-top: 30px;
+      background-color: #f4f4f4;
+    }
+    .renqi ul::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .renqi ul > li {
+      float: left;
+      margin-right: 30px;
+    }
+    .renqi ul > li {
+      width: 200px;
+      height: 250px;
+      background-color: plum;
+    }
+    .renqi ul > li:first-child{
+      width: 520px;
+      height: 530px;
+    }
+    .renqi ul > li:nth-child(4),
+    .renqi ul > li:nth-child(7) {
+      margin-right: 0;
+    }
+    .renqi ul > li:nth-child(2),
+    .renqi ul > li:nth-child(3),
+    .renqi ul > li:nth-child(4) {
+      margin-bottom: 30px;
+    }
+
+    
+
+    
+  </style>
+</head>
+<body>
+  <div class="products">
+    <div class="wrapper">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="renqi">
+    <div class="wrapper">
+      <ul>
+        <li>
+          <div>
+            <img src="./images/1.png" alt="">
+          </div>
+          <div></div>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

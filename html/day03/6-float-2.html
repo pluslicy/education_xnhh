@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮动布局1</title>
+  <style>
+    .container {
+      background-color: #f4f4f4;
+    }
+    .container > div {
+      height: 100px;
+      width: 200px;
+    }
+    .container > div.one {
+      background-color: pink;
+      float: left;
+    }
+    .container > div.two {
+      background-color: plum;
+      width: 220px;
+      float: left;
+    }
+    .container > div.three {
+      background-color: powderblue;
+      width: 250px;
+      margin-left: 430px;
+    }
+    p {
+      margin: 0;
+    }
+
+    /* 产品 */
+    .products {
+      height:200px;
+      background-color: salmon;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </div>
+  <div class="products">
+
+  </div>
+</body>
+</html>
