@@ -338,11 +338,51 @@
 					<p>two</p>
 					::after
 				</div>
-	8. 规则
-		字体
+	8. 规则【简单大方】
+		单位值
+			px 	像素 
+
+		字体【设计师-架构师规定】
+		【可以被继承】
+			<div style="font-size:12px">
+				one
+				<div>
+					two
+				</div>
+			</div>
+
+			font-size 	字体大小 	默认16px 	
+			font-weight 字体粗细程度
+				normal【默认】
+				bold 		加粗
+				bolder	比当前元素上继承的值要大一些
+				100~900
+			font-style 	风格 （是否打开斜体）
+				normal【默认】
+				italic
+			font-family 	字体族
+			line-height 	行高
+				绝对单位：1px 
+			速写
+			font: [font-weight] [font-style] font-size/line-height font-family
+
 		网络字体（字体图标可）
-		文本
+		文本【可以被继承】
+			text-align
+				left 	居左排列
+				center
+				right	
+			text-indent 	文本缩进
+			text-decoration
+				line-through
+				overline
+				underline
+				none
+			text-transform 	字体大小写转换
+				uppercase
+				lowercase
 		列表
+			list-style:none
 		盒子
 		背景
 	9. css布局
@@ -379,6 +419,23 @@
 			1. 获取数据 ajax，交互
 			2. 将数据绑定到页面中（vue-dom操作）
 			3. 当数据改变后页面更新（vue）
+
+	mysql装不上
+	1. apt install mysql-server-5.7
+	2. mysql -uroot -pxxx
+	3. 本地navicator连接不上
+		防火墙
+		mysql配置文件
+	
+	========================
+	1. 找见问题原因
+	2. google查询一下，查询出现问题的原因
+	3. 解决
+
+	问题：mysql装不上 （ubuntu16.04）
+	你是如何尝试解决： mysql -uroot -pxxx 报错 xxx
+	你觉得问题出在哪里：防火墙
+	你觉得难点在哪里：我不知道如何打开防火墙
 
 
 
