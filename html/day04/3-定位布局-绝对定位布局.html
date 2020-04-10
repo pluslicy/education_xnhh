@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 重置 */
+    body {
+      font: 12px 'Microsoft YaHei','微软雅黑';
+      color: #666666;
+    }
+    body ,ul {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #666666;
+    }
+    /* 导航 */
+    .nav {
+      background-color: #f4f4f4;
+      position: relative;
+    }
+    .nav > ul::after {
+      content:"";
+      display: block;
+      clear: both;
+    }
+    .nav >ul >li {
+      float:left;
+      line-height: 3em;
+      width: 100px;
+      text-align: center;
+    }
+    .nav >ul >li:hover {
+      background-color: cornflowerblue;
+      color: #ffffff;
+    }
+    .nav >ul >li:hover a {
+      color: #ffffff;
+    }
+    .nav >ul >li:hover > .nav_son {
+      display: block;
+    }
+    .nav .nav_son {
+      position: absolute;
+      background-color: cornflowerblue;
+      width: 100%;
+      top: 3em;
+      left: 0;
+      text-align: left;
+      padding: 1em;
+      display: none;
+    }
+    /* / 导航 */
+   
+  </style>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="">首页</a>
+      </li>
+      <li>
+        <a href="">学院风采</a>
+        <div class="nav_son">
+          软件学院
+        </div>
+      </li>
+      <li>
+        <a href="">校园招聘</a>
+        <div class="nav_son">
+          <div>IT</div>
+          <div>机械</div>
+        </div>
+      </li>
+      <li><a href="">联系我们</a></li>
+    </ul>
+  </div>
+</body>
+</html>

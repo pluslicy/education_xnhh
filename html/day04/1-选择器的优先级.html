@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择器的优先级</title>
+  <style>
+    /*100 */
+    #first {
+      color: turquoise;
+    }
+
+    /*100+ 10 + 10 = 120*/
+    .outer > #first.inner  {
+      color: lightcoral;
+      font-size: 20px;
+    }
+
+    /*10 + 1 = 11*/
+    .outer > div {
+      color: rgb(63, 86, 94);
+    }
+
+    
+    ul.nav > li {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: teal;
+      float: left;
+      
+    }
+    ul.nav > li:first-child {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="one inner" id="first">one</div>
+    <div class="two">two</div>
+    <div>three</div>
+  </div>
+
+  <ul class="nav">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</body>
+</html>

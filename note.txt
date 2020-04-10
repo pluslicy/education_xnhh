@@ -439,10 +439,56 @@
 			2> 浮动元素的父元素没有高度的问题
 				1. 所有子元素浮动，通过伪元素进行支撑
 				2. 保留一个子元素不浮动，用于支撑父元素，为了让他显示出来，可以加margin
-		2) 案例
+
+		2) 定位布局
+			position:static; 【静态】
+
+      position:relative
+      position:absolute
+      position:fixed
+      position:sticky
+
+			如果一个元素具有position规则，并且规则值为relative,absolute,fixed,sticky之一,那么，我就认为这个元素是一个定位元素；只有定位元素才能使用如下规则：
+				left:
+				right:
+				bottom:
+				top:
+
+			相对定位
+      	position:relative
+				特点：
+					1. 相对于当前元素所在位置
+					2. 当前元素不会脱离文档流(即使发生了移动也不会被其他元素抢占位置)
+				应用：
+					一般情况下相对定位要配合绝对定位来进行移动
+
+			绝对定位
+				特点：
+					1. 相对于距离它最近的父定位元素，如果它的父元素没有定位元素，那就相对于浏览器视口
+					2. 脱离文档流（不占据默认文档流的空间；块元素的宽度不再为100%）
+			固定定位
+
+			粘滞定位
+
+
+		=) 案例
 			1. 块元素居中
 				给块元素一个宽度
 				margin:0 auto;
+
+	10. 选择器的优先级 *
+		Importance 		特权
+			!important
+		Specificity 	权重（积分机制）
+			1000 	style属性中
+			100 	id选择器
+			10 		类选择器，伪类过滤器，属性过滤器
+			1 		元素选择器，伪元素选择器
+		Source order 	顺序
+
+	11. 
+			
+		
 
 
 
