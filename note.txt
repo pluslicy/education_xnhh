@@ -627,9 +627,125 @@ xxx微小型项目定制工作室（远程办公）
 	公司定制小的it项目
 	...
 
+~~~~~~~~~~拓展技术~~~~~~~~~~~
+1. 阿里云服务器的使用
+	外网ip 	39.108.98.130（linux）ubuntu16.04
+	root 	
+	root密码	
+
+	putty
+	ssh工具: xshell
+
+	> ssh 
+	> scp
+
+2. 登录到阿里云服务器上（ubuntu）
+	> ssh root@39.108.98.130
+3. 更新源
+	# apt update
+4. 安装软件
+	1) 在线安装（apache、mysql、vsftpd、subversion）
+		# apt install apache2
+	2) 解压安装（jdk、tomcat）
+		1. 下载安装包
+		2. 解压
+		3. 配置环境变量
+	3) 编译安装(nginx、fastdfs、... 专业软件)
+		源码 c代码
+
+5. 安装apache
+	apache作为静态网页的服务器
+	1) 测试
+		http://39.108.98.130:80 
+	2) 安装
+		# apt install apache2
+
+		查看apache2服务器的运行状态
+		# service apache2 status
+
+		通过wget测试web服务器的运行状态
+		# wget http://127.0.0.1:80/index.html 
+			如果这种方式可以获取到一个index.html说明你的apache打开了，并且能用
+		# wget http://39.108.98.130:80/index.html
+			如果访问不到表示无法通过外网访问我们的服务器，极有可能是防火墙的问题
+		
+	3) 部署
+		将我们的网页部署/var/www/html下即可
+
+		http://39.108.98.130:80/index.html
+
+		/ 										=> /var/www/html
+		/yanxuan/index.html 	=> /var/www/html/yanxuan/index.html
+		
+		http://39.108.98.130:80/yanxuan/index.html
+
+6. 如何将本地文件上传到阿里云服务器？？？
+	yanxuan	
+		images
+		css
+			common.css
+			style.css
+		index.html
+	1) 打包成为xxx.zip
+	2) 通过scp命令进行上传
+		> scp ./xxx.zip root@ip:~
+		将xxx.zip上传到ip指定的服务器的root账号的家目录下
+	3) 通过unzip进行解压
+		如果unzip没有安装，要进行安装
+		# apt install unzip
+		# unzip xxx.zip
+7. 在阿里云服务器中安装jdk
+	1) 通过scp命令将jdk上传到云服务器上
+	2) 将jdk解压到/opt下
+	3) 配置环境变量
+		/etc/profile
+
+		export JAVA_HOME=/opt/jdk1.8.0_131
+		export PATH=$PATH:$JAVA_HOME/bin
+8. 在阿里云服务器中安装mysql
+	1) 命令安装
+		# apt install mysql-server-5.7
+		一定要注意设置默认密码，默认密码不要为root
+		rootSH123
+	2) 安装完成mysql会自动启动
+		# mysql -uroot -prootSH123
+	
+	3) 默认情况下，root账号只允许当前主机访问
+		如果现在你通过navicator来访问就会访问失败，为了数据安全，不允许！
+		# mysql -uroot -h39.108.98.130 -prootSH123
+
+		解决方案：
+			1. 修改系统表user,将你使用的账号的host字段改为%,表示允许任何主机访问数据库
+				mysql> use mysql
+				mysql> update user set host='%' where user='root'
+			2. 修改mysql的配置文件 /etc/mysql/my.cnf
+				[client]
+				default-character-set=utf8
+				[mysqld]
+				character-set-server=utf8
+				max_connections=1000000
+
+				#一定放在结尾位置
+				bind-address=0.0.0.0
+			3. 重启mysql服务
+				# service mysql restart
+
+			4. 如果装失败了，请你彻底卸载mysql重新安装配置
+
+			5. 通过navicator连接mysql进行数据库的创建和表的创建
+				ddl 一般不用
+
+9. 如果涉及团队协作
+	代码版本控制 github(私有仓库，团队人数不能超过4人)
+	我就想用svn，研究如何在linux操作系统中安装svn的服务器
 
 
 
+
+	-----
+	将你之前写的后端服务程序部署到阿里云上
+
+	
 
 
 
