@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>固定定位</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 400px;
+      background-color:#f4f4f4;
+      position: fixed;
+      right: 0;
+      top: 100px;
+    }
+    .box > div {
+      box-sizing: border-box;
+      height: 100px;
+      line-height: 100px;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .box > div {
+      position: relative;
+    }
+    .box > div > .box_son {
+      width: 300px;
+      height: 260px;
+      background-color: cornflowerblue;
+      position: absolute;
+      right: 120px;
+      top: 0;
+      display: none;
+    }
+    .box > div:hover > .box_son {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div style="min-height: 1000px;">
+
+  </div>
+  <div class="box">
+    <div>
+      <a href="">one</a>
+      <div class="box_son">this is one</div>
+    </div>
+    <div>
+      <a href="">two</a>
+      <div class="box_son">this is two</div>
+    </div>
+    <div>three</div>
+    <div>four</div>
+  </div>
+</body>
+</html>
