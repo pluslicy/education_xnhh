@@ -23,6 +23,7 @@
   line-height: 36px;
   font-size: 12px;
 }
+
 .top_bar  .top_nav >li:not(:first-child)::before{
   content: "";
   display: inline-block; 
@@ -34,7 +35,33 @@
 .top_bar  .top_nav >li:hover > a {
   color: #ffffff;
 }
+.top_bar  .top_nav >li:hover .top_nav_son {
+  display: block;
+}
+
 .top_bar  .top_nav >li .top_nav_son {
   position: absolute;
+  width: 60px;
+  text-align: center;
+  border:1px solid #f4f4f4;
+  padding:0 10px;
+  display:none;
+}
+.top_bar  .top_nav >li .top_nav_son .sj {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  transform: rotate(45deg);
+}
+.top_bar  .top_nav >li .top_nav_son > li {
+  border-bottom: 1px solid #f4f4f4;
+  line-height: 36px;
+}
+.top_bar  .top_nav >li .top_nav_son > li:last-child {
+  border-bottom: none;
 }
 /* /1.顶行 */

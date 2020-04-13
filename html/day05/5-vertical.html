@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>垂直</title>
+  <style>
+    .box {
+      background-color: #666666;
+      text-align: center;
+      line-height: 48px;
+    }
+    .box > span {
+      color: #ffffff;
+    }
+    .box > span:first-child {
+      font-size: 12px;
+      vertical-align: baseline;
+    }
+    .box > span:nth-child(2) {
+      height: 36px;
+      border-right: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <span>hello world</span>
+    <span></span>
+  </div>
+</body>
+</html>
