@@ -1,0 +1,23 @@
+/* 对于当前项目中所有的网页都适用 */
+/* 1. 重置样式 */
+body {
+  font: 12px/1.5 "Microsoft Yahei","微软雅黑",verdana;
+  color: #333333;
+}
+body,ul,ol,p,h1,h2,h3 {
+  margin: 0;
+  padding: 0;
+}
+ul ,ol{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* 2.公共样式 */
+.wrapper {
+  width: 1090px;
+  margin: 0 auto;
+}

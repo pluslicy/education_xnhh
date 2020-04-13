@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伸缩盒</title>
+  <style>
+    .container {
+      border: 1px solid #cccccc;
+      display: flex;
+    }
+    .container > div {
+      height:100px;
+      flex: 1;
+    }
+    .container > div:nth-child(1){
+      background-color:bisque;
+    }
+    .container > div:nth-child(2){
+      background-color:cadetblue;
+    }
+    .container > div:nth-child(3){
+      background-color:cornflowerblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>固定</title>
+  <style>
+    .box {
+      position: relative;
+      background-color: #f4f4f4;
+      width: 500px;
+      margin: 0 auto;
+    }
+    /* 模态框 */
+    .one {
+      height: 300px;
+      width: 300px;
+      background-color: chocolate;
+      position: absolute;
+      left: 0;
+      z-index: 1;
+    }
+    /* 二级导航 */
+    .two {
+      width: 400px;
+      height: 400px;
+      background-color: cadetblue;
+      position: absolute;
+      right: 0;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="one"></div>
+    <div class="two"></div>
+  </div>
+</body>
+</html>

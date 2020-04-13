@@ -1,0 +1,40 @@
+.container {
+
+}
+/* 1.顶行 */
+.top_bar {
+  background-color: #333333;
+}
+.top_bar a {
+  color: #999999;
+}
+.top_bar > .wrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.top_bar  .top_nav {
+  float: right;
+}
+.top_bar  .top_nav >li{
+  float: left;
+  padding-left: 1em;
+  position: relative;
+  line-height: 36px;
+  font-size: 12px;
+}
+.top_bar  .top_nav >li:not(:first-child)::before{
+  content: "";
+  display: inline-block; 
+  height: 16px;
+  border-left: 1px solid #999999;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+.top_bar  .top_nav >li:hover > a {
+  color: #ffffff;
+}
+.top_bar  .top_nav >li .top_nav_son {
+  position: absolute;
+}
+/* /1.顶行 */
