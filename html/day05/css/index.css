@@ -7,6 +7,7 @@
 }
 .top_bar a {
   color: #999999;
+  font-size: 12px;
 }
 .top_bar > .wrapper::after {
   content: "";
@@ -37,6 +38,7 @@
 }
 .top_bar  .top_nav >li:hover .top_nav_son {
   display: block;
+  background-color: #ffffff;
 }
 
 .top_bar  .top_nav >li .top_nav_son {
@@ -65,3 +67,115 @@
   border-bottom: none;
 }
 /* /1.顶行 */
+/* 2.logo及搜索 */
+.two_bar {
+  padding: 28px 0;
+}
+.two_bar .logo {
+  display: inline-block;
+  width: 212px;
+  height:60px;
+  background: url('../images/pics.png');
+  background-position: 0 -298px;
+}
+
+.two_bar .search_bar {
+  float: right;
+  width: 500px;
+}
+
+.two_bar .shopcar {
+  float: right;
+  height:20px;
+  padding: 8px 10px;
+  border:1px solid #cc9756;
+  border-radius: 19px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+.two_bar .shopcar:hover {
+  background-color: #f5f3ef;
+}
+
+.two_bar .shopcar > span {
+  vertical-align: middle;
+}
+
+.two_bar .shopcar > span:nth-child(2) {
+  color: #cc9756;
+
+}
+.two_bar .shopcar > .icon_shopcar {
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/pics.png);
+  background-position: 0 -148px;
+}
+.two_bar .shopcar > .icon_num {
+  width: 18px;
+  height: 18px;
+  background-image: url(../images/pics.png);
+  background-position: 0 -51px;
+  text-align: center;
+  line-height: 18px;
+  color: #ffffff;
+}
+/* 搜索框 */
+.two_bar .search_box {
+  box-sizing: border-box;
+  border: 1px solid #cc9756;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 19px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+/* 搜索框下的搜索图标 */
+.two_bar .search_box > span {
+  vertical-align: middle;
+}
+.two_bar .search_box > span.icon {
+  height: 18px;
+  width: 18px;
+  background-image: url('../images/pics.png');
+  background-position: 0 -518px;
+}
+.two_bar .search_box > input {
+  border: none;
+  font-size: 14px;
+  width: 330px;
+}
+.two_bar .search_box > span.btn_search {
+  float: right;
+  width: 90px;
+  height: 38px;
+  background-color: #cc9756;
+  text-align: center;
+  color: #ffffff;
+}
+
+.two_bar .keywords {
+  padding: 8px 30px;
+}
+.two_bar .keywords ul> li {
+  float: left;
+ 
+}
+.two_bar .keywords ul> li:first-child a {
+  color: #cc9756;
+}
+.two_bar .keywords ul> li a {
+  padding:0 .4em;
+  font-size: 12px;
+  border-right:1px solid #ccc;
+  color: #999999;
+}
+.two_bar .keywords ul> li:last-child a {
+  border-right: none;
+}
+
+
+
+
+
+/* /2.logo及搜索 */

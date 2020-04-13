@@ -21,3 +21,20 @@ a {
   width: 1090px;
   margin: 0 auto;
 }
+.f_left {
+  float:left;
+}
+.f_right {
+  float: right;
+}
+.f_clear {
+  clear: both;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0 6px;
+}
+.btn {
+  display: inline-block;
+}
