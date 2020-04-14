@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伸缩盒布局</title>
+  <style>
+    .box {
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      background-color: #f4f4f4;
+    }
+    .box > div {
+      background-color: cadetblue;
+      margin: 0 2px;
+      flex-grow: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div>one</div>
+    <div>two</div>
+    <div>three</div>
+  </div>
+</body>
+</html>

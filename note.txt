@@ -514,9 +514,23 @@
 			...
 		3. vertical-align【用于在一个盒子中，有多个行内元素，但是这个多个行内元素高度不一致，通过这个属性可以调整多个元素的垂直位置，一般用于一行既有文本，也有图片/边框】
 			用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。
+	
+	11. 伸缩盒布局
+
+		响应式布局（bootstrap[封装了一些布局代码，完成响应式布局]，栅格系统）
+			<div class="row"> 
+				<div class="col-sm-2">1</div>
+				<div class="col-sm-2">2</div>
+				<div class="col-sm-2">3</div>
+				<div class="col-sm-2">4</div>
+				<div class="col-sm-2">5</div>
+				<div class="col-sm-2">6</div>
+			</div>
+			布局代码：浮动，定位，伸缩盒
+			bs3 	float 	稳定（绝大多数浏览器都兼容）
+			bs4 	flex 		兼容（今年来，绝大多数浏览器都兼容）
 			
-			
-		
+			spring security 	jdk8 拉姆达 	jdk1.6(银行)
 
 
 
