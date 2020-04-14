@@ -1,7 +1,7 @@
 /* 对于当前项目中所有的网页都适用 */
 /* 1. 重置样式 */
 body {
-  font: 12px/1.5 "Microsoft Yahei","微软雅黑",verdana;
+  font: 12px "Microsoft Yahei","微软雅黑",verdana;
   color: #333333;
 }
 body,ul,ol,p,h1,h2,h3 {
