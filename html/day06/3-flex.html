@@ -6,15 +6,27 @@
   <title>伸缩盒布局</title>
   <style>
     .box {
-      height: 100px;
+      /* height: 100px; */
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       background-color: #f4f4f4;
+      align-items: center;
     }
     .box > div {
       background-color: cadetblue;
-      margin: 0 2px;
-      flex-grow: 1;
+      margin: 1%;
+      height: 50px;
+      /* flex-grow: 1; */
+      flex-basis: 18%;
+      /* flex-grow: 1;   */
+    }
+    .box >div:nth-child(odd) {
+      flex-shrink: 1;
+      height: 25px;
+    }
+    .box > div:nth-child(even){
+      flex-shrink: 2;
     }
 
   </style>
@@ -24,6 +36,21 @@
     <div>one</div>
     <div>two</div>
     <div>three</div>
+    <div>four</div>
+    <div>five</div>
+    <div>six</div>
+    <div>one</div>
+    <div>two</div>
+    <div>three</div>
+    <div>four</div>
+    <div>five</div>
+    <div>six</div>
+    <div>one</div>
+    <div>two</div>
+    <div>three</div>
+    <div>four</div>
+    <div>five</div>
+    <div>six</div>
   </div>
 </body>
 </html>

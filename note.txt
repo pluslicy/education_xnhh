@@ -532,8 +532,53 @@
 			
 			spring security 	jdk8 拉姆达 	jdk1.6(银行)
 
+		1. 语法
+			<div class="parent">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+			</div>
 
+			【声明在父元素上的规则】
+			display:flex;
+				这个规则应用到父元素上，表示当前元素为伸缩盒。默认情况下，主轴在x轴上，交叉轴在y轴上
+			flex-direction: row/column
+				默认情况下，为row (主轴在x轴上)
+			flex-wrap:no-wrap/wrap
+				默认情况下，为no-wrap，表示当容器中的子元素宽度和超过了容器宽，不换行
+			justify-content 对主轴上剩余空间的排列设置（不要使用flex-grow对剩余空间进行分配了！）
+				flex-start
+				flex-end
+				center
+				space-around
+				space-between
+			align-items	交叉轴上的显示
+				flex-start 	交叉轴的开始排列
+				flex-end 		交叉轴结束排列
+				center 			交叉轴的中间排列
+			【声明在子元素上的规则】
+			flex-basis: 	指定子元素的宽度基准【固定，相对】,width
+      flex-grow: 1;	对容器剩余空间的分配，1表示当前元素占据剩余空间的一份
+			flex-shrink:1;对于亏损空间的垫付，1表示栈亏损空间的一份
+			flex: flex-grow flex-shrink flex-basis;
+	
+		2. 封装
+			数据问题？模拟数据【电商】
+			商品管理
+				一条条录入
+				python	爬虫 	jd 	
+				1) 华为p40 	5999 	介绍 	主图	... 	(300条)
 
+				前端 -> Java -Jpython->python
+
+			软件工作室
+			3人				flex-basic 	flex-grow 	flex-shrink
+			a 	200 	200w 	2 	+300w 				-150w 	50
+			b 	100 	100w 	1 	+150w 				-75w 		25
+			c 	100 	100w 	1 	+150w					-75w		25
+				1000w
+				100w
+			
 
 
 

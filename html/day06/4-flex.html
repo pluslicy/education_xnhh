@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伸缩盒</title>
+  <style>
+    .box {
+      padding: 1em 0;
+      background-color: #cccccc;
+      display: flex;
+      flex-direction: row;
+      /* justify-content: space-around; */
+      justify-content: space-between;
+    }
+    .box > div {
+      height: 40px;
+      flex-basis: 100px;
+      flex-grow: 1;
+    }
+    .box > div:nth-child(odd){
+      background-color: cadetblue;
+    }
+    .box > div:nth-child(even){
+      background-color: coral;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
