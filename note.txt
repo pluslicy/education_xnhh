@@ -579,6 +579,68 @@
 				1000w
 				100w
 			
+13. 表格与表单（html）
+	【一般应用在后台管理系统中】
+	html标签（块、行内、功能）
+	css3
+		选择器（基本，层次，属性过滤器，伪元素过滤器，伪类过滤器）
+		规则（文本，字体，背景，列表，盒子）
+		盒子模型
+		布局（浮动，定位布局，伸缩盒布局）
+		-- bootstrap()
+
+	1) 表格
+		与列表类似，用于展现一些数据，一般不用于布局，因为他的默认样式太复杂
+			你是不是做技术？？？ 	你是不是IT（猥琐，邋遢，有钱）【外界】 表格
+			格局？							div 架构
+
+		table 		表格容器
+			caption 表格标题
+			thead 	表格的表头
+				tr > th > *
+			tbody 	表格的主体
+				tr > td > *
+			tfoot 	表格底部
+				tr > td > *
+
+		表格美化
+			1. 属性
+				align:center
+				colspan 	跨列 	【通过excel来操作模拟】
+				rowspan 	跨行 	
+
+			2. css 	首选方案！！
+				table {
+					border-collapse:collapse
+					width:90%;
+					margin:0 auto;
+				}
+
+				table td,
+				table th {
+					border:1px solid #ccc;
+					text-align:center;
+				}
+
+	2) iframe
+		div.container
+			div.header
+			div.content
+				div.left
+				div.right
+		iframe
+			将外部的一个网页链接进来你当前的网页中
+	3) 表单
+
+
+
+14. 动画（前端【移动互联】）- 美观夸张【扁平化】
+	语法
+	框架
+
+-----
+javascript
+	
 
 
 
