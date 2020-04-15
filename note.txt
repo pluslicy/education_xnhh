@@ -581,7 +581,7 @@
 			
 13. 表格与表单（html）
 	【一般应用在后台管理系统中】
-	html标签（块、行内、功能）
+	html标签（块、行内、功能【table、iframe、form】）
 	css3
 		选择器（基本，层次，属性过滤器，伪元素过滤器，伪类过滤器）
 		规则（文本，字体，背景，列表，盒子）
@@ -631,6 +631,18 @@
 		iframe
 			将外部的一个网页链接进来你当前的网页中
 	3) 表单
+		注意：
+			1. 在企业级开发的时候，一般不直接使用这些表单，因为表单元素在不同的浏览器中显示的样子是不同的。一般使用组件（bootstrap/element-ui...）
+			2. 看点资讯精选
+				发布文章功能：
+					标题 							input type="text"
+					文章所属分类			select 	如果是二级分类，需要插件，树形下拉菜单
+					正文 							富文本编辑器（需要插件）
+			3. 在表单学习的时候
+				掌握表单和表单元素的属性及特性
+				掌握交互原理 
+
+
 		获取用户输入的数据，是用户与我们程序之间一个数据桥梁
 		同步
 			form表单的直接提交就是同步操作
@@ -638,16 +650,87 @@
 			form表单通过ajax提交
 
 		form
+			action 	url(相对路径、绝对路径)
+			method 	get/post 
+			enctype 【只有在method=post考虑，如果是get方式，参数将会被直接编码为查询字符串，无法更改】
+				application/x-www-form-urlencoded
+					默认值								保存或更新品牌数据【字符，photo,name,introduce】
+					查询字符串
+					username=terry&password=123321&department=1
+					规则：
+						属性名与属性值之间通过=分割
+						键值对之间通过&分割
+						属性值中如果有特殊字符，会将这个特殊字符转换为百分比格式【这也是为什么二进制不能使用这种编码】
+							/ => %2F
+				multipart/form-data 		附件上传【二进制图片】
+					如果表单中出现了二进制文件，<input type="file" name="file"/>,就无法使用查询字符串，只能用这种协议
+				text/plain
 
+				application/json【目前在同步请求中不支持，但是在ajax中是支持的】
 
+		表单及元素
+			<form>
+				<input type="text"/> 			单行文本框
+				<input type="password"/> 	单行密码框
+				<input type="file"/> 			文件选择按钮，encotype必须为multipart/form-data
+				<input type="radio"/> 		单选按钮
+					单选按钮一般会同时出现多个，着多个按钮的name值必须相等才能达到互斥的要求
+					value必须通过，这样当勾选某个单选按钮的时候会提交该按钮上的value值
+				<input type="checkbox"/> 	复选按钮
+				<input type="reset"/> 		将表单内容恢复默认
+				<input type="submit"/> 		提交表单
+				<input type="button/> 		普通按钮
+				...【h5新增】
+				<input type="search" placeholde="请输入关键字"/> 		搜索框
+				<input type="date" /> 														日期框
+				
+				
+				<select name="department">
+					<option value="1">JavaEE</option>
+					<option value="2">WebUI</option> 				当用户选择WebUI的时候，department的值为2
+					<option value="3">BigData</option>
+				</select>
+				<textarea name="introduce rows="" cols="">提示...</textarea>
+			</form>
+		
+
+	鄙视链
+		iphone产品工程师 		-> 富士康		-> 	大众iphone用户 	-> 不会使用iphone
+		研究协议，自定义协议 	-> 使用协议（http,请求头）->前端（http 知道） -> 美工（不知道）
+		嵌入式 c 						-> java -> 前端 -> 美工
 
 14. 动画（前端【移动互联】）- 美观夸张【扁平化】
 	语法
 	框架
 
+15. 过渡效果
+
+16. 媒体查询（响应式布局）
+
+
 -----
 javascript
-	
+	准备：
+		ubuntu16.04 (1. 强制使用linux、2. 强制编写代码、3.最专业学习方法)
+		vim
+	1. ECMAScript 10天【vim】
+		语法标准（所有的浏览器及js解析器都遵循的标准）
+		let a = 3;
+		let sayHell = function(){}
+		sayHello();
+
+	2. DOM 	2天【vscode】
+		各个浏览器提供的通过js操作html的api，会有兼容性问题，另外只能在浏览器上执行
+		document.getElementById()
+		...
+
+	3. BOM 	1天 【vscode】
+		各个浏览器提供的通过js操作浏览器的api,会有兼容性问题，另外只能在浏览器上执行
+		alert()
+		prompt()
+		confirm()
+		XMLHttpRequest
+
 
 
 
