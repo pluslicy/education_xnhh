@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单</title>
+  <script>
+    // 说一说你理解的ajax
+    // 1. 原生 js -> 调用bom（浏览器） ->委托浏览器向后台发请求 （HTTP协议）
+    /*
+      请求报文
+      请求行  GET /login
+      请求头  
+            代理
+            编码格式
+            cookie
+            token 
+            ...
+      请求体【post】
+          参数
+    */
+    /*
+    window.onload = function(){
+      let loginForm = document.getElementById('loginForm');
+      loginForm.onsubmit = function(event){
+        // 异步提交
+        // 创建xhr对象， 浏览器提供的，提供用来让你和后端进行ajax
+        let xhr = new XMLHttpRequest();
+        
+        xhr.open('POST','http://localhost:8888/user/login');
+        // json
+        xhr.setRequestHeader("Content-Type","application/json");
+        let input_username = document.getElementById("input_username");
+        let input_password = document.getElementById("input_password");
+        let data = {
+          username:input_username.value,
+          password:input_password.value
+        }
+        xhr.send(JSON.stringify(data));
+        xhr.onreadystatechange = function(){
+          if(this.readyState === 4){
+            if(this.status === 200){
+              let response = JSON.parse(this.response);
+              if(response.status===200){
+                alert("成功，您的token为："+response.data.token);
+                // 将令牌缓存起来
+                // 以后每次发送ajax，我们都需要将令牌携带这请求头中
+                // 跳转
+              } else {  
+                alert("登录失败！"+response.message);
+              }
+            }
+          }
+        }
+        event.preventDefault();
+      }
+    }
+      
+    */
+    // 2. 框架 jquery 基于回调函数的ajax
+
+
+    // 3. 框架 axios 基于promise
+  </script>
+</head>
+<body>
+  <div class="container">
+    <form id="loginForm" action="http://localhost:8888/user/login" method="POST">
+      用户名 <input type="text" name="username" id="input_username"> <br>
+      密码 <input type="text" name="password" id="input_password"> <br>
+      方向 
+      <select name="department" >
+        <option value="1">JavaEE</option>  
+        <option value="2">WebUI</option>  
+        <option value="3">大数据</option>  
+      </select> <br>
+
+      <input type="submit" value="登录">
+    </form>
+  </div>
+</body>
+</html>
