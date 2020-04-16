@@ -700,7 +700,54 @@
 		嵌入式 c 						-> java -> 前端 -> 美工
 
 14. 动画（前端【移动互联】）- 美观夸张【扁平化】
+	梦幻西游，呼吸灯... 
 	语法
+		animation
+			1)关键帧定义
+				随着时间移动的一些列的css规则
+				@keyframes name {
+					0% {
+						width:100px
+					}
+					50% {
+						width:300px
+					}
+					100%{
+						width:150px;
+					}
+				}
+			2)动画定义
+				.move {
+					animation-name: move; 							指定关键帧名称
+					animation-duration: 2000ms; 				设置动画持续时间（from-to）
+					animation-timing-function: linear;  时间曲线
+					animation-fill-mode:backwards; 			动画完成后保持的规则（from/to）
+					animation-delay: 1000ms; 						持续时间
+					animation-iteration-count: infinite;重复次数
+					animation-direction:alternate-reverse; 	动画运行的方向
+				}
+
+				尤雨溪
+					浙江
+					iphone 
+					html5 仿google 	=> google（尤雨溪 - react/angular - vue ->github (知乎发帖)）
+					咖啡（请作者喝咖啡）
+					阿里 weex -vue (移动互联【app】)
+						手机淘宝
+					-------------------
+					vue 
+					weex
+
+			3) 应用
+				<div class="move"></div>
+				开源组件库 
+				自定义组件库
+
+			flash (直播流-监控)
+				海康 flash
+			4) animation.css（css3 animation动画轮子）
+				
+
 	框架
 
 15. 过渡效果

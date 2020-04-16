@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动画</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: cadetblue;
+    }
+
+    /* 1. 设置动画帧 */
+    @keyframes move {
+      from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: 1000px;
+      }
+    }
+    /* 2. 设置动画 */
+    .move {
+      animation-name: move;
+      animation-duration: 2000ms;
+      animation-timing-function: linear;
+      /* animation-timing-function: steps(10); */
+      animation-fill-mode:backwards;
+      animation-delay: 1000ms;
+      animation-iteration-count: infinite;
+      animation-direction:alternate-reverse;
+    }
+    .m1 {
+      animation-delay: 1s;
+    }
+    .m2 {
+      animation-delay: 2s;
+    }
+    .m3 {
+      animation-delay: 3s;
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- 3. 应用 -->
+  <div class="box move m1"></div>
+  <div class="box move m2"></div>
+  <div class="box move m3"></div>
+</body>
+</html>
