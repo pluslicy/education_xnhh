@@ -725,19 +725,8 @@
 					animation-delay: 1000ms; 						持续时间
 					animation-iteration-count: infinite;重复次数
 					animation-direction:alternate-reverse; 	动画运行的方向
+					animation: 		以上的速写形式
 				}
-
-				尤雨溪
-					浙江
-					iphone 
-					html5 仿google 	=> google（尤雨溪 - react/angular - vue ->github (知乎发帖)）
-					咖啡（请作者喝咖啡）
-					阿里 weex -vue (移动互联【app】)
-						手机淘宝
-					-------------------
-					vue 
-					weex
-
 			3) 应用
 				<div class="move"></div>
 				开源组件库 
@@ -746,13 +735,58 @@
 			flash (直播流-监控)
 				海康 flash
 			4) animation.css（css3 animation动画轮子）
-				
+				1. 导入animation.css
+				2. 调用class
 
 	框架
 
 15. 过渡效果
+	一般表示在元素状态切换的时候的过渡效果
 
-16. 媒体查询（响应式布局）
+	transition-property
+		规则名
+		规则名1,规则名2[,...]
+		all
+		指明在状态切换的时候，哪些属性添加过渡效果
+
+	transition-duration
+		持续时间 ms/s
+	transition-timing-function
+		linear
+		steps
+	transition-delay 
+		延迟 ms/s
+	transition
+		transition-property transition-duration [transition-delay][transition-timing-function]
+
+16. 变形
+	transform 	
+		指定变形函数
+
+		1)旋转
+			rotate(deg) 	旋转度数
+			rotateX(deg)
+			rotateY(deg)
+			rotateZ(deg)
+		2) 平移
+			translate(长度)
+			translateX(长度)
+			translateY(长度)
+			translateZ(长度)
+		3) 放大
+			scale()
+			scaleX()
+			scaleY()
+		4) 拉伸
+			skew(deg)
+			skewX(deg)
+			skewY(deg)
+	transform-origin	
+		指定变形的原点
+
+
+
+17. 媒体查询（响应式布局）
 
 
 -----
