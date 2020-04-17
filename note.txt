@@ -785,22 +785,79 @@
 		指定变形的原点
 
 17. 媒体查询（响应式布局）
-	@media(条件) {
+
+	@media(媒体查询条件) {
 		选择器 {
 			规则
 		}
 	}
-	表达式
-		screen
-		min-width:1280px 	宽度要大于1280px
-		max-width:1680px 	宽度要小于1680px
-		...
-	运算符
-		AND
+	1) 媒体查询的应用位置
+		1.直接应用在规则内部
+			<style>
+				html{
+					font-size:20px
+				}
+				@media screen and (max-width:1500px){
+
+				}
+			</style>
+		2.应用在link标签中
+			<link rel="stylesheet" href="./css/screen_small.css" media="(max-width: 1380px)">
+			<link rel="stylesheet" href="./css/screen_middle.css" media="(min-width: 1380px) and (max-width: 1500px)">
+			<link rel="stylesheet" href="./css/screen_large.css" media="(min-width: 1500px) and (max-width: 1780px)">
+			<link rel="stylesheet" href="./css/screen_xlarge.html" media=" (min-width: 1780px) ">
+		3.应用在style标签中
+			<style>
+			
+			</style>
+			<style media="screen and (max-width: 1380px)">
+				.wrapper {
+					width: 1105px;
+				}
+				html {
+					font-size: 20px;  
+				}
+			</style>
+			<style media="screen and (min-width: 1380px) and (max-width: 1500px)">
+				.wrapper {
+					width: 1200px;
+				}
+				html {
+					font-size: 25px;  
+				}
+			</style>
+
+	2)注意：
+		1. 如果我们编写的网页运行在pc中，那么一般要给固定宽度，但是这个宽度如果随着屏幕的宽度发生改变，我们就成为响应式（.wrapper）
+		2. 如果我们编写的网页运行在大屏上，一般就采用满屏铺，不用指定wrapper
+		3. 如果我们编写的网页运行在mobile中，一般就采用满屏铺，不用指定wrapper,但是需要响应式布局
+			如果手机宽屏（横放）
+				原先一行放4列，横放后一行放2列
+			手机
+			pad
+
+18. at规则（@）
+	1) @font-face
+	2) @keyframes
+	3) @media
+	4) @import
+		@import url
+		@import url list-of-media-queries;
+	5) @charset 
+		指定当前css文件的编码格式（说明当前文件是使用xx编码）
+
+19. css脚本语言（css预处理语言）【了解】
+	sass
+	less
+
+20. bootstrap
+	第三方库：iconfont/animation.css/bootstrap
+	bs 是css3的一个库，也就说我们如果用了这个库，就可以很少的去写css代码,因为css中提供了大量的选择及规则。我们只管通过类调用即可
+
+	
 
 
-
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	屏幕标准：
 		2560px 	宽屏高分辨率
 		1680px 	

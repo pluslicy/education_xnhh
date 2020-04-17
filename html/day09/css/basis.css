@@ -1,0 +1,35 @@
+html {
+  font-size: 20px;  /*rem*/
+}
+.videos {
+  background-color: #f4f4f4;
+  padding: 1em 0;
+}
+.wrapper {
+  width: 1500px;
+  margin: 0 auto;
+}
+.videos > .wrapper > ul::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/*1105 -5 * 5 = 1080 = 216*/
+.videos > .wrapper > ul > li {
+  float: left;
+  width: 16.28959276%;
+  margin-right: 0.45248868%;
+}
+.videos > .wrapper > ul > li:last-child {
+  margin-right: 0;
+}
+.videos .video > .img {
+  height: 5rem;
+  overflow: hidden;
+}
+.videos .video > .img img {
+  width: 100%;
+}
+.videos .video > .title {
+  line-height: 2em;
+}
