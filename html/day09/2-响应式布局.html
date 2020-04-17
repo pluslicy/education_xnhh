@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>响应式</title>
+  <link rel="stylesheet" href="../day05/css/common.css">
+  <style>
+    html {
+      font-size: 20px;  /*rem*/
+    }
+    .videos {
+      background-color: #f4f4f4;
+      padding: 1em 0;
+    }
+    .wrapper {
+      width: 1500px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 1380px) {
+      .wrapper {
+        width: 1105px;
+      }
+      html {
+        font-size: 20px;  
+      }
+    }
+    @media screen and (min-width: 1380px) and (max-width: 1500px){
+      .wrapper {
+        width: 1200px;
+      }
+      html {
+        font-size: 25px;  
+      }
+    }
+    @media screen and (min-width: 1500px) and (max-width: 1780px){
+      .wrapper {
+        width: 1500px;
+      }
+      html {
+        font-size: 30px;  
+      }
+    }
+    @media screen and (min-width: 1780px) {
+      .wrapper {
+        width: 1710px;
+      }
+      html {
+        font-size: 35px;  
+      }
+    }
+    .videos > .wrapper > ul::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    /*1105 -5 * 5 = 1080 = 216*/
+    .videos > .wrapper > ul > li {
+      float: left;
+      width: 16.28959276%;
+      margin-right: 0.45248868%;
+    }
+    .videos > .wrapper > ul > li:last-child {
+      margin-right: 0;
+    }
+    .videos .video > .img {
+      height: 5rem;
+      overflow: hidden;
+    }
+    .videos .video > .img img {
+      width: 100%;
+    }
+    .videos .video > .title {
+      line-height: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="videos">
+    <div class="wrapper">
+      <ul>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+       
+        
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

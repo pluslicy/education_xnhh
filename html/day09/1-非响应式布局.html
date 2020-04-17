@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>响应式</title>
+  <link rel="stylesheet" href="../day05/css/common.css">
+  <style>
+    html {
+      font-size: 20px;  /*rem*/
+    }
+    .videos {
+      background-color: #f4f4f4;
+      padding: 1em 0;
+    }
+    .wrapper {
+      width: 1105px;
+      margin: 0 auto;
+    }
+    .videos > .wrapper > ul::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    /*1105 -5 * 5 = 1080 = 216*/
+    .videos > .wrapper > ul > li {
+      float: left;
+      width: 180px;
+      margin-right: 5px;
+    }
+    .videos > .wrapper > ul > li:last-child {
+      margin-right: 0;
+    }
+    .videos .video > .img {
+      height: 5rem;
+      overflow: hidden;
+    }
+    .videos .video > .img img {
+      width: 100%;
+    }
+    .videos .video > .title {
+      line-height: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="videos">
+    <div class="wrapper">
+      <ul>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+        <li class="video">
+          <div class="img">
+            <img src="./images/video1.jpg" alt="">
+          </div>
+          <div class="title">
+            青春有你2：第一季度
+          </div>
+        </li>
+       
+        
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
