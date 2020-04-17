@@ -850,10 +850,20 @@
 	sass
 	less
 
-20. bootstrap
+20. bootstrap4(思路，封装)【了解】
 	第三方库：iconfont/animation.css/bootstrap
 	bs 是css3的一个库，也就说我们如果用了这个库，就可以很少的去写css代码,因为css中提供了大量的选择及规则。我们只管通过类调用即可
 
+	css库
+	js库
+	组件库
+
+	bootstrap-reboot.css 		重置样式，类似于我们自己写的common.css，要比我们写的好多了
+	bootstrap-grid.css 			栅格布局（封装了flex布局【bs4封装float布局】）
+	bootstrap.css 					完整样式（包含重置样式，栅格布局，按钮，表格，下拉菜单，模态框...）
+
+
+	vue (组件库-栅格系统、组件[table,form,button])
 	
 
 
